@@ -9,7 +9,7 @@ class TestPersonnage(unittest.TestCase):
     def test_attaque(self):
          Perso_att = Personnage()
          Perso_defen = Personnage() 
-         Perso_defen.recevoire_attaque()
+         Perso_defen.recevoir_attaque(Perso_att)
          self.assertEqual(Perso_defen.get_hp(), 9)
 
 
