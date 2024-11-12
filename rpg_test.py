@@ -11,7 +11,12 @@ class TestPersonnage(unittest.TestCase):
          Perso_defen = Personnage() 
          Perso_defen.recevoir_attaque(Perso_att)
          self.assertEqual(Perso_defen.get_hp(), 9)
-
+         
+    def test_personnage_meurt_a_0_hp(self):
+        personnage = Personnage()
+        for _ in range(10):  
+            personnage.recevoir_attaque(None)
+        self.assertTrue(personnage.est_mort())  
 
 if __name__ == '__main__':
     unittest.main()
