@@ -1,8 +1,10 @@
 import unittest
 
 class TestPersonnage(unittest.TestCase):
-    def test_exemple(self):
-        self.assertTrue(True)
+    def test_perso_10_creation(self):
+        personnage = Personnage()
+        self.assertEqual(personnage.get_hp(), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
