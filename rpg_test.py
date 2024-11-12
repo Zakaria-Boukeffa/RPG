@@ -1,5 +1,5 @@
 import unittest
-
+from src import Personnage
 class TestPersonnage(unittest.TestCase):
     def test_perso_10_creation(self):
         personnage = Personnage()
