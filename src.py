@@ -5,4 +5,5 @@ class Personnage:
     def get_hp(self):
         return self.hp  
     def recevoir_attaque(self, attaquant):  
-        self.hp -= 1
+        if self.hp > 0 :
+            self.hp -= 1
