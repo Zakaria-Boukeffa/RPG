@@ -23,6 +23,13 @@ class TestPersonnage(unittest.TestCase):
         personnage.recevoir_attaque(None)  
         personnage.se_soigner()  
         self.assertEqual(personnage.get_hp(), 10)
+    
+    
+    def test_personnage_hp_plus_10(self):
+        Personnage = Personnage()
+        Personnage.se_soigner()  
+        self.assertEqual(Personnage.get_hp(), 11)
+
 
 if __name__ == '__main__':
     unittest.main()
