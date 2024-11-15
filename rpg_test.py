@@ -17,6 +17,13 @@ class TestPersonnage(unittest.TestCase):
         for _ in range(10):  
             personnage.recevoir_attaque(None)
         self.assertTrue(personnage.est_mort())  
+    
+    def test_personnage_peut_se_soigner(self):
+        personnage = Personnage()
+        personnage.recevoir_attaque(None)  
+        personnage.se_soigner()  
+        self.assertEqual(personnage.get_hp(), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
