@@ -27,8 +27,8 @@ class TestPersonnage(unittest.TestCase):
     def test_attaque_critique(self):
         attaquant = Personnage()
         deffenseur = Personnage()
-        attaquant.attaque_critique(cible)
-        self.assertEqual(cible.get_hp(), 3) 
+        attaquant.attaque_critique(deffenseur)
+        self.assertEqual(deffenseur.get_hp(), 7) 
 
 
 if __name__ == '__main__':
