@@ -17,4 +17,5 @@ class Personnage:
             self.hp += 1
     
     def attaque_critique(self, defenseur):
-            defenseur.hp = 7
+        
+            defenseur.hp -= 3
