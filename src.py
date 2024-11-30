@@ -15,3 +15,6 @@ class Personnage:
     def se_soigner(self):
         if self.hp < 10:
             self.hp += 1
+    
+    def attaque_critique(self, defenseur):
+            defenseur.hp = 7
