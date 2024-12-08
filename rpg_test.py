@@ -29,13 +29,12 @@ class TestPersonnage(unittest.TestCase):
         deffenseur = Personnage()
         attaquant.attaque_critique(deffenseur)
         self.assertEqual(deffenseur.get_hp(), 7) 
-        
+
     def test_attaque_fumble(self):
         attaquant = Personnage()
-        deffenseur = Personnage()
-        attaquant.attaque_fuble(deffenseur)
-        self.assertEqual(deffenseur.get_hp(), 9)  
-
+        deffenseur = Personnage()    
+        attaquant.attaque_fumble(deffenseur)
+        self.assertEqual(attaquant.get_hp(), 9)
 
 if __name__ == '__main__':
     unittest.main()
