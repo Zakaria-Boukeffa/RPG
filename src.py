@@ -21,4 +21,4 @@ class Personnage:
             defenseur.hp -= 3
             
     def attaque_fumble(self, defenseur):
-        self.hp = 9
+        self.hp -= 1
