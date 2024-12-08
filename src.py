@@ -19,3 +19,6 @@ class Personnage:
     def attaque_critique(self, defenseur):
         
             defenseur.hp -= 3
+            
+    def attaque_fumble(self, defenseur):
+        self.hp = 9
