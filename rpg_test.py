@@ -37,7 +37,7 @@ class TestPersonnage(unittest.TestCase):
         self.assertEqual(attaquant.get_hp(), 9)
 
     def test_Endurance_Level(self):
-        personnage = Personnage(Endurance=1)
+        personnage = Personnage(endurance=1)
         self.assertEqual(personnage.hp, 12)
 
 if __name__ == '__main__':
