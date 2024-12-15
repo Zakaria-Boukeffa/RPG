@@ -55,5 +55,11 @@ class TestPersonnage(unittest.TestCase):
             self.assertGreaterEqual(sorted_group[i].speed, sorted_group[i+1].speed)
 
 
+    def test_full_battle(self):
+        group = Battle.create_random_group()  
+        sorted_group = Battle.sort_by_speed(group)  
+        alive_count = Battle.full_battle(sorted_group) 
+        self.assertEqual(alive_count, 1)
+
 if __name__ == '__main__':
     unittest.main()
