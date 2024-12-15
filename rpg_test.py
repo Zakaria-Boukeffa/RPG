@@ -39,6 +39,10 @@ class TestPersonnage(unittest.TestCase):
     def test_Endurance_Level(self):
         personnage = Personnage(endurance=1)
         self.assertEqual(personnage.hp, 12)
+        
+    def test_Speed_Level(self):
+        personnage = Personnage(speed=1)
+        self.assertEqual(personnage.speed, 1)
 
 if __name__ == '__main__':
     unittest.main()
