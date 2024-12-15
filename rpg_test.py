@@ -36,5 +36,9 @@ class TestPersonnage(unittest.TestCase):
         attaquant.attaque_fumble(deffenseur)
         self.assertEqual(attaquant.get_hp(), 9)
 
+    def test_Endurance_Level(self):
+        personnage = Personnage(Endurance=1)
+        self.assertEqual(personnage.hp, 12)
+
 if __name__ == '__main__':
     unittest.main()
