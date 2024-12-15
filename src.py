@@ -52,3 +52,37 @@ class Battle :
     
     def sort_by_speed(group):
         return sorted(group, key=lambda x: x.speed, reverse=True)
+
+    def full_battle(group):
+        alive_count = len(group) 
+        while alive_count > 1: 
+            for attacker in group: 
+                if attacker.est_mort():
+                    continue
+                
+                possible_defenders = [p for p in group if p != attacker]
+                if not possible_defenders:
+                    continue
+                
+                print(f"Alive characters: {alive_count} \n")
+                
+                defender = random.choice(possible_defenders)
+                attack_type = random.randint(0, 2) 
+                
+                if attack_type == 0:
+                    defender.recevoir_attaque(attacker)
+                elif attack_type == 1:
+                    attacker.attaque_critique(defender)
+                elif attack_type == 2:
+                    attacker.attaque_fumble(defender)
+
+                if defender.est_mort():
+                    alive_count -= 1
+                
+                print(f"{attacker.name} attacked {defender.name}.")
+                print(f"{defender.name} HP: {defender.get_hp()}")
+                
+                if alive_count == 1:
+                    print(f"{attacker.name} is the winner")
+                    break 
+        return alive_count
