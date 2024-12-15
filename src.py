@@ -1,6 +1,9 @@
 class Personnage:
-    def __init__(self):
-        self.hp = 10
+    def __init__(self, Endurance: int = 0):
+        self.hp = 10  
+        self.Endurance = Endurance  # Store Endurance level
+        self.hp += Endurance * 2
+  
 
     def get_hp(self):
         return self.hp
