@@ -1,7 +1,7 @@
 class Personnage:
     def __init__(self, Endurance: int = 0):
         self.hp = 10  
-        self.Endurance = Endurance  # Store Endurance level
+        self.Endurance = Endurance  
         self.hp += Endurance * 2
   
 
