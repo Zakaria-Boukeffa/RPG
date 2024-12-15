@@ -48,6 +48,12 @@ class TestPersonnage(unittest.TestCase):
         group = Battle.create_random_group()
         self.assertEqual(len(group), 10)
 
+    def test_sort_by_speed(self):
+        group = Battle.create_random_group()
+        sorted_group = Battle.sort_by_speed(group)
+        for i in range(len(sorted_group) - 1):
+            self.assertGreaterEqual(sorted_group[i].speed, sorted_group[i+1].speed)
+
 
 if __name__ == '__main__':
     unittest.main()
