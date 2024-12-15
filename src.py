@@ -1,8 +1,11 @@
 class Personnage:
-    def __init__(self, Endurance: int = 0):
-        self.hp = 10  
-        self.Endurance = Endurance  
-        self.hp += Endurance * 2
+    def __init__(self, endurance: int = 0):
+        self.base_hp = 10  
+        self.endurance = endurance  
+        self.hp = self.calculate_hp()
+
+    def calculate_hp(self):
+        return self.base_hp + (self.endurance * 2)
   
 
     def get_hp(self):
