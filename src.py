@@ -1,3 +1,5 @@
+import random
+
 class Personnage:
     def __init__(self, endurance: int = 0, speed: int = 0):
         self.base_hp = 10  
@@ -32,6 +34,8 @@ class Battle :
     def create_random_group():
         group = []
         for _ in range(10):
-            personnage = Personnage()
+            endurance = random.randint(0, 5)
+            speed = random.randint(1, 3)
+            personnage = Personnage(endurance=endurance, speed=speed)
             group.append(personnage)
         return group
