@@ -8,7 +8,6 @@ class Personnage:
     def calculate_hp(self):
         return self.base_hp + (self.endurance * 2)
   
-
     def get_hp(self):
         return self.hp
 
@@ -28,3 +27,11 @@ class Personnage:
             
     def attaque_fumble(self, defenseur):
         self.hp -= 1
+        
+class Battle :
+    def create_random_group():
+        group = []
+        for _ in range(10):
+            personnage = Personnage()
+            group.append(personnage)
+        return group

@@ -1,5 +1,5 @@
 import unittest
-from src import Personnage
+from src import Personnage, Battle 
 class TestPersonnage(unittest.TestCase):
     
     def test_perso_10_creation(self):
@@ -43,6 +43,11 @@ class TestPersonnage(unittest.TestCase):
     def test_Speed_Level(self):
         personnage = Personnage(speed=1)
         self.assertEqual(personnage.speed, 1)
+
+    def test_create_random_group(self):
+        group = Battle.create_random_group()
+        self.assertEqual(len(group), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
