@@ -27,3 +27,11 @@ class Personnage:
             
     def attaque_fumble(self, defenseur):
         self.hp -= 1
+        
+class Battle :
+    def create_random_group():
+        group = []
+        for _ in range(10):
+            personnage = Personnage()
+            group.append(personnage)
+        return group
