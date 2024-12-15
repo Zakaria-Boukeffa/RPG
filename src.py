@@ -40,3 +40,5 @@ class Battle :
             group.append(personnage)
         return group
     
+    def sort_by_speed(group):
+        return sorted(group, key=lambda x: x.speed, reverse=True)
