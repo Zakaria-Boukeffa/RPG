@@ -8,7 +8,6 @@ class Personnage:
     def calculate_hp(self):
         return self.base_hp + (self.endurance * 2)
   
-
     def get_hp(self):
         return self.hp
 

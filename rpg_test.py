@@ -44,5 +44,10 @@ class TestPersonnage(unittest.TestCase):
         personnage = Personnage(speed=1)
         self.assertEqual(personnage.speed, 1)
 
+    def test_create_random_group(self):
+        group = Battle.create_random_group()
+        self.assertEqual(len(group), 10)
+
+
 if __name__ == '__main__':
     unittest.main()
