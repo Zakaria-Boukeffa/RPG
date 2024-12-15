@@ -1,7 +1,7 @@
 import random
 
 class Personnage:
-    def __init__(self, endurance: int = 0, speed: int = 0):
+    def __init__(self, Name: str = '', endurance: int = 0, speed: int = 0):
         self.base_hp = 10  
         self.endurance = endurance  
         self.speed = speed
@@ -39,3 +39,4 @@ class Battle :
             personnage = Personnage(endurance=endurance, speed=speed)
             group.append(personnage)
         return group
+    
